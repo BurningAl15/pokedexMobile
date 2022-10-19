@@ -13,7 +13,6 @@ import { styles } from "../styles/";
 export default function Pokedex() {
   const [pokemons, setPokemons] = useState([]);
   const [nextURL, setNextURL] = useState(null);
-  // console.log("pokemons--->", pokemons);
 
   useEffect(() => {
     (async () => {
@@ -29,6 +28,7 @@ export default function Pokedex() {
       for await (const pokemon of response.results) {
         const pokemonDetails = await getPokemonDetailsByUrlApi(pokemon.url);
         pokemonsArray.push({
+          url: pokemonDetails.url,
           id: pokemonDetails.id,
           name: pokemonDetails.name,
           type: pokemonDetails.types[0].type.name,
