@@ -22,6 +22,7 @@ export default function PokedexNavigation() {
           title: "",
           headerTransparent: true,
           headerHideShadow: true,
+          headerTintColor: "white",
         }}
       />
       <Stack.Screen
@@ -32,6 +33,7 @@ export default function PokedexNavigation() {
           headerTransparent: true,
           headerTranslucent: true,
           headerHideShadow: true,
+          headerTintColor: "white",
         }}
       />
     </Stack.Navigator>

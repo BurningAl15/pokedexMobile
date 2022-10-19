@@ -11,6 +11,7 @@ import { styles } from "../styles/";
 
 import { getSinglePokemonApi } from "../api/pokemon";
 import { Header, Stats, Type } from "../components/Pokemon/";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function Pokemon(props) {
   const {
@@ -28,6 +29,21 @@ export default function Pokemon(props) {
       console.error(e);
     }
   };
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerRight: () => null,
+      headerLeft: () => (
+        <Icon
+          name="arrow-left"
+          color="#fff"
+          size={20}
+          style={{ marginLeft: 20 }}
+          onPress={navigation.goBack}
+        />
+      ),
+    });
+  }, [navigation, params]);
 
   useEffect(() => {
     loadPokemon();

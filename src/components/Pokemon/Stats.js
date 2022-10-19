@@ -14,7 +14,7 @@ export default function Stats(props) {
 
   return (
     <View style={styles.content}>
-      <Text style={styles.title}>Stats</Text>
+      <Text style={styles.title}>Base Stats</Text>
       {map(stats, (item, index) => (
         <View key={index} style={styles.block}>
           <View style={styles.blockTitle}>
