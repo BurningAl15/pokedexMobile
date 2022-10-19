@@ -10,7 +10,7 @@ import { StatusBar } from "expo-status-bar";
 import { styles } from "../styles/";
 
 import { getSinglePokemonApi } from "../api/pokemon";
-import { Header, Type } from "../components/Pokemon/";
+import { Header, Stats, Type } from "../components/Pokemon/";
 
 export default function Pokemon(props) {
   const {
@@ -54,6 +54,7 @@ export default function Pokemon(props) {
         )}
       </Text> */}
       <Type types={pokemon.types} />
+      <Stats stats={pokemon.stats} />
     </ScrollView>
     // </SafeAreaView>
   );
