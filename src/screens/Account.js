@@ -10,13 +10,17 @@ import { useAuth } from "../hooks/";
 //Styles
 // import { styles } from "../styles/";
 
-export default function Account() {
+export default function Account(props) {
+  const {
+    navigation,
+    route: { params },
+  } = props;
   const { auth } = useAuth();
 
   return (
     <SafeAreaView>
       <StatusBar style="auto" />
-      {auth ? <UserData /> : <LoginForm />}
+      {auth ? <UserData navigation={navigation} /> : <LoginForm />}
     </SafeAreaView>
   );
 }

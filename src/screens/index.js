@@ -1,11 +1,6 @@
-import Favourite from './Favourite';
-import Pokedex from './Pokedex';
-import Account from './Account';
-import Pokemon from './Pokemon';
+import Favourites from "./Favourites";
+import Pokedex from "./Pokedex";
+import Account from "./Account";
+import Pokemon from "./Pokemon";
 
-export {
-    Favourite,
-    Pokedex,
-    Pokemon,
-    Account
-};
+export { Favourites, Pokedex, Pokemon, Account };
