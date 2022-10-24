@@ -1,17 +1,16 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import { Image } from 'react-native';
-import FavouriteNavigation from './FavouriteNavigation';
-import PokedexNavigation from './PokedexNavigation';
-import AccountNavigation from './AccountNavigation';
-
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import { Image } from "react-native";
+import FavouriteNavigation from "./FavouriteNavigation";
+import PokedexNavigation from "./PokedexNavigation";
+import AccountNavigation from "./AccountNavigation";
 
 const Tab = createBottomTabNavigator();
 
 export const CustomNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Pokedex">
       <Tab.Screen
         name="Favorite"
         component={FavouriteNavigation}
@@ -43,14 +42,18 @@ export const CustomNavigator = () => {
         }}
       />
     </Tab.Navigator>
-  )
-}
+  );
+};
 
 function renderPokeball(focused) {
   return (
     <Image
-      source = {require("../assets/pokeball.png")}
-      style={focused.focused ? {width:70,height:70,top:-20} : {width:75,height:75,top:-15}}
+      source={require("../assets/pokeball.png")}
+      style={
+        focused.focused
+          ? { width: 70, height: 70, top: -20 }
+          : { width: 75, height: 75, top: -15 }
+      }
     />
-  )
+  );
 }

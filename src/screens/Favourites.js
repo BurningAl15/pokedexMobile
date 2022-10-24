@@ -62,7 +62,6 @@ export default function Favourites(props) {
         <NoLogged />
       ) : (
         <>
-          <Text>Favourite</Text>
           <PokemonList pokemon={pokemons} />
         </>
       )}

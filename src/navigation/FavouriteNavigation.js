@@ -20,7 +20,12 @@ export default function FavouriteNavigation() {
         name="Favourites"
         component={Favourites}
         options={{
-          title: "Favoritos",
+          title: "",
+          headerTransparent: true,
+          headerTranslucent: true,
+          headerHideShadow: true,
+          // headerTintColor: "white",
+          // headerBackTitleStyle:
         }}
       />
       <Stack.Screen

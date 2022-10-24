@@ -9,6 +9,8 @@ export const styles = StyleSheet.create({
   },
   pokedexContainer: {
     backgroundColor: "#fff",
+    flex: 1,
+
     // alignItems: "center",
     // justifyContent: "center",
   },

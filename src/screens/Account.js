@@ -8,7 +8,7 @@ import { LoginForm, UserData } from "../components/Auth/";
 import { useAuth } from "../hooks/";
 
 //Styles
-// import { styles } from "../styles/";
+import { styles } from "../styles/";
 
 export default function Account(props) {
   const {
@@ -18,7 +18,7 @@ export default function Account(props) {
   const { auth } = useAuth();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       {auth ? <UserData navigation={navigation} /> : <LoginForm />}
     </SafeAreaView>
