@@ -5,7 +5,7 @@ import { FAVOURITE_STORAGE } from "../utils/constants";
 export async function getPokemonFavouriteApi() {
   try {
     const response = await AsyncStorage.getItem(FAVOURITE_STORAGE);
-    console.log("Response", response);
+    // console.log("Response", response);
     // return response ? JSON.parse(response) : [];
     return JSON.parse(response || "[]");
   } catch (e) {
@@ -17,15 +17,15 @@ export async function getPokemonFavouriteApi() {
 export async function addPokemonFavouriteApi(id) {
   try {
     let favourites = await getPokemonFavouriteApi();
-    console.log("Favourites", favourites);
+    // console.log("Favourites", favourites);
 
     if (!favourites.includes(id)) {
       favourites.push(id);
-      console.log("Id", id, "\nFavourites", favourites);
+      // console.log("Id", id, "\nFavourites", favourites);
       await AsyncStorage.setItem(FAVOURITE_STORAGE, JSON.stringify(favourites));
     } else {
       favourites = favourites.filter((fav) => fav !== id);
-      console.log("Id", id, "\nFavourites", favourites);
+      // console.log("Id", id, "\nFavourites", favourites);
       await AsyncStorage.setItem(FAVOURITE_STORAGE, JSON.stringify(favourites));
     }
     // await AsyncStorage.removeItem(FAVOURITE_STORAGE);

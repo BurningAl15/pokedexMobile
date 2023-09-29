@@ -30,7 +30,7 @@ export default function Favourite(props) {
     try {
       const response = await isFavouriteApi(id);
       setIsFavourite(response);
-      console.log("Response", response);
+      // console.log("Response", response);
     } catch (e) {
       console.error(e);
       throw e;
